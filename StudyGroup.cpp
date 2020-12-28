@@ -22,7 +22,7 @@ void StudyGroup::Add(const Type& etype, const vector<StudyGroup*>& v, const Week
 	schedule.push_back(s);
 }
 
-void StudyGroup::CheckAdd(const Type& etype, const vector<StudyGroup*>& v, const WeekType& wtype, const Day& day, const AudienceType& atype, const size_t& number, const string& audience, const string& subject, const string& teacher)
+void StudyGroup::CheckAdd(const Type& etype, const vector<StudyGroup*>& v, const WeekType& wtype, const Day& day, const AudienceType& atype, const size_t& number, const string& audience, const string& subject, const string& teacher) const
 {
 	for (auto i : schedule) {
 		if (i.wtype == wtype && i.day == day && i.number == number) {
