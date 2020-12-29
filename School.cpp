@@ -1,7 +1,7 @@
 #include "School.h"
 
 
-void School::AddToSchedule(StudyGroup* cl, const WeekType& wtype, const Day& day, const size_t& num, const AudienceType& atype, const string& cab, const string& subj, const string& teach)
+void School::AddToSchedule(StudyGroup* cl,WeekType wtype,Day day,size_t num,AudienceType atype, const string& cab, const string& subj, const string& teach)
 {
 	if (wtype != common) {
 		throw invalid_argument("У школы тип недели - common");
@@ -37,7 +37,7 @@ Type School::GetType() const
 	return type;
 }
 
-void School::Delete(const size_t& id)
+void School::Delete(size_t id)
 {
 	for (auto i : classes[id]->GetSchedule()) {
 		for (auto& j : TeacherSchedule) {
