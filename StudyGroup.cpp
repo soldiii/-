@@ -15,14 +15,14 @@ StudyGroup::StudyGroup(const string& name)
 	this->name = name;
 }
 
-void StudyGroup::Add(const Type& etype, const vector<StudyGroup*>& v, const WeekType& wtype, const Day& day, const AudienceType& atype, const size_t& number, const string& audience, const string& subject, const string& teacher)
+void StudyGroup::Add(Type etype, const vector<StudyGroup*>& v,WeekType wtype,Day day,AudienceType atype,size_t number, const string& audience, const string& subject, const string& teacher)
 {
 	CheckAdd(etype, v, wtype, day, atype, number, audience, subject, teacher);
 	ScheduleStruct s = { wtype,atype,day,number,audience,teacher,subject };
 	schedule.push_back(s);
 }
 
-void StudyGroup::CheckAdd(const Type& etype, const vector<StudyGroup*>& v, const WeekType& wtype, const Day& day, const AudienceType& atype, const size_t& number, const string& audience, const string& subject, const string& teacher) const
+void StudyGroup::CheckAdd(Type etype, const vector<StudyGroup*>& v,WeekType wtype,Day day,AudienceType atype,size_t number, const string& audience, const string& subject, const string& teacher) const
 {
 	for (auto i : schedule) {
 		if (i.wtype == wtype && i.day == day && i.number == number) {
