@@ -10,7 +10,7 @@ bool operator!= (const ScheduleStruct& a, const ScheduleStruct& b)
 	return !(a == b);
 }
 
-void University::AddAudience(const AudienceType& type, const string& aud)
+void University::AddAudience(AudienceType type, const string& aud)
 {
 	if (audiences.count(aud) == 0) {
 		audiences[aud] = type;
@@ -55,7 +55,7 @@ Type University::GetType() const
 	return type;
 }
 
-void University::AddToSchedule(StudyGroup* group, const WeekType& wtype, const Day& day, const size_t& number,const AudienceType& atype,const  string& cab, const string& subj, const string& teach)
+void University::AddToSchedule(StudyGroup* group,WeekType wtype,Day day,size_t number,AudienceType atype,const  string& cab, const string& subj, const string& teach)
 {
     size_t n = 0;
 	switch (atype) {
@@ -135,7 +135,7 @@ void University::AddToSchedule(StudyGroup* group, const WeekType& wtype, const D
 	}
 }
 
-void University::Delete(const size_t& id)
+void University::Delete(size_t id)
 {
 	for (auto i: groups[id]->GetSchedule()) {
 		if (i.atype != cabinet) {
