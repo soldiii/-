@@ -60,9 +60,9 @@ class StudyGroup {
 private:
 	string name; // название группы/класса
 	vector<ScheduleStruct> schedule; // расписание
-	void CheckAdd(const Type&, const vector<StudyGroup*>&, const WeekType&, const Day&, const AudienceType&, const size_t&, const string&, const string&, const string&) const; // проверка данных занятия на правильность
+	void CheckAdd(Type, const vector<StudyGroup*>&,WeekType,Day,AudienceType,size_t, const string&, const string&, const string&) const; // проверка данных занятия на правильность
 public:
-	void Add(const Type& ,const vector<StudyGroup*>&, const WeekType&, const Day&, const AudienceType&, const size_t&, const string&, const string&, const string&); // добавление данных занятия в расписание
+	void Add(Type ,const vector<StudyGroup*>&,WeekType,Day,AudienceType,size_t, const string&, const string&, const string&); // добавление данных занятия в расписание
 	string GetName() const ;
 	vector<ScheduleStruct> GetSchedule() const ;
 	StudyGroup(const string& name);
