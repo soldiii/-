@@ -18,7 +18,7 @@ public:
 	virtual vector <StudyGroup*> GetStudyGroups() const = 0;
 	virtual void Add(StudyGroup*) = 0;
 	virtual Type GetType() const = 0;
-	virtual void AddToSchedule(StudyGroup* ,const WeekType&, const Day&, const size_t&,const AudienceType& ,const string& ,const string&,const string&) = 0;
-	virtual void Delete(const size_t&) = 0;
+	virtual void AddToSchedule(StudyGroup* , WeekType,Day,size_t,AudienceType,const string& ,const string&,const string&) = 0;
+	virtual void Delete(size_t) = 0;
 	Educational_establishment(string name);
 };
